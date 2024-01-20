@@ -1,3 +1,6 @@
+@php
+    $segment = request()->segment(1);
+@endphp
 <nav class="navbar-default navbar-static-side" role="navigation">
     <div class="sidebar-collapse">
         <ul class="nav metismenu" id="side-menu">
@@ -21,7 +24,7 @@
                 </div>
             </li>
             @foreach (config('apps.module.module') as $key => $val)
-                <li class="active">
+                <li class="{{ (in_array($segment, $val['name'])) ? 'active' : '' }}">
                     <a href=""><i class="{{ $val['icon'] }}"></i><span class="nav-label">{{ $val['title'] }}</span> <span class="fa arrow"></span></a>
                     @if (isset($val['subModule']))
                         <ul class="nav nav-second-level">

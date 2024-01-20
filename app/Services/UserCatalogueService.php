@@ -129,12 +129,6 @@ class UserCatalogueService implements UserCatalogueServiceInterface
 
     }
 
-    private function convertBirthdayDate($birthday = ''){
-        $carbonDate = Carbon::createFromFormat('Y-m-d', $birthday);
-        $birthday = $carbonDate->format('Y-m-d H:i:s');
-        return $birthday;
-    }
-
     private function paginateSelect(){
         return ['id', 'name', 'description', 'publish'];
     }
