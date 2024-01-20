@@ -89,7 +89,7 @@
                             <div class="col-lg-12">
                                 <div class="form-row">
                                     <label for="" class="control-label text-left">Ảnh đại diện</label>
-                                    <input type="text" name="image" value="{{ old('image', ($user->image) ?? '') }}" class="form-control input-image" data-upload="Images" placeholder="..." autocomplete="off">
+                                    <input type="text" name="image" value="{{ old('image', ($user->image) ?? '') }}" class="form-control upload-image" data-upload="Images" placeholder="..." autocomplete="off">
                                 </div>
                             </div>
                         </div>

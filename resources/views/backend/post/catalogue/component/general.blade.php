@@ -18,7 +18,7 @@
     <div class="col-lg-12">
         <div class="form-row">
             <label for="" class="control-label text-left">Nội dụng nhóm bài viết</label>
-            <textarea type="text" name="content" value="{{ old('content', ($postCatalogue->content) ?? '') }}" class="form-control ck-editor" placeholder="..." autocomplete="off" id="content" data-height="500"></textarea>
+            <textarea type="text" name="content" value="{{ old('content', ($postCatalogue->content) ?? '') }}" class="form-control ck-editor" placeholder="..." autocomplete="off" id="content" data-height="300"></textarea>
         </div>
     </div>
 </div>

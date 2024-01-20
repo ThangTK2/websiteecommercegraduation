@@ -9,12 +9,12 @@
             $('.meta-title').html(value)
         })
 
-       $('.seo-canonical').each(function(){
+       $('input[name=canonical]').each(function(){
             let _this = $(this)
             _this.css({
-                'padding-left':   parseInt($('.baseUrl').outerWidth()) + 10
+                'padding-left': parseInt($('.baseUrl').outerWidth()) + 10
             })
-       })
+        })
 
        $('input[name=canonical]').on('keyup', function(){
             let input = $(this)

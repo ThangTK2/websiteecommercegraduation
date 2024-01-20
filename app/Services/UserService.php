@@ -36,7 +36,9 @@ class UserService implements UserServiceInterface
         DB::beginTransaction();
         try {
             $payload = $request->except(['_token', 'send', 're_password']);  //except: lấy tất cae ngoại trừ..
-            $payload['birthday'] = $this->convertBirthdayDate($payload['birthday']);
+            if($payload['birthday'] != null){
+                $payload['birthday'] = $this->convertBirthdayDate($payload['birthday']);
+            }
             $payload['password'] = Hash::make($payload['password']);
             $user = $this->userRepository->create($payload);
             DB::commit();
@@ -51,7 +53,9 @@ class UserService implements UserServiceInterface
         DB::beginTransaction();
         try {
             $payload = $request->except(['_token', 'send']);  //except: lấy tất cae ngoại trừ..
-            $payload['birthday'] = $this->convertBirthdayDate($payload['birthday']);
+            if($payload['birthday'] != null){
+                $payload['birthday'] = $this->convertBirthdayDate($payload['birthday']);
+            }
             $user = $this->userRepository->update($id, $payload);
             DB::commit();
             return true;

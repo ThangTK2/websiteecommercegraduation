@@ -56,7 +56,7 @@
                             <span>Đường dẫn</span>
                         </label>
                         <div class="input-wrapper">
-                            <input type="text" name="canonical" value="{{ old('canonical', ($postCatalogue->canonical) ?? '') }}" class="form-control" placeholder="..." autocomplete="off">
+                            <input type="text" name="canonical" value="{{ old('canonical', ($postCatalogue->canonical) ?? '') }}" class="form-control" placeholder="" autocomplete="off">
                             <span class="baseUrl"> {{ config('app.url') }}</span>
                         </div>
                     </div>
